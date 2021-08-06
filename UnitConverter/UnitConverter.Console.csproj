@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Log.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Log.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyProvider\SimpleDependencyProvider.csproj" />
+    <ProjectReference Include="..\UnitConverter.ApplicationCore\UnitConverter.ApplicationCore.csproj" />
+  </ItemGroup>
+
+</Project>
